@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مايكروسوفت شيربوينت أونلاين - نظام إدارة المستندات الأمثل</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.2);
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-6 py-8">
+            <nav class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fab fa-microsoft text-3xl"></i>
+                    <span class="ml-3 text-xl font-bold">شيربوينت أونلاين</span>
+                </div>
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#" class="hover:text-gray-200 transition">الرئيسية</a>
+                    <a href="#features" class="hover:text-gray-200 transition">المميزات</a>
+                    <a href="#comparison" class="hover:text-gray-200 transition">المقارنة</a>
+                    <a href="#advanced" class="hover:text-gray-200 transition">الميزات المتقدمة</a>
+                    <!-- <a href="#contact" class="hover:text-gray-200 transition">اتصل بنا</a> -->
+                </div>
+                <div class="md:hidden">
+                    <button class="focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </nav>
+            
+            <div class="flex flex-col md:flex-row items-center mt-16 mb-12">
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">نظام إدارة المستندات الأمثل لمؤسستك</h1>
+                    <p class="text-lg mb-8">مايكروسوفت شيربوينت أونلاين - الحل المتكامل لإدارة المستندات والتعاون الفعال بين فرق العمل.</p>
+                    <!-- <div class="flex space-x-4 space-x-reverse">
+                        <button class="bg-white text-blue-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:scale-105">طلب عرض توضيحي</button>
+                        <button class="border border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-700 transition transform hover:scale-105">معرفة المزيد</button>
+                    </div> -->
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center" data-aos="fade-right">
+                    <img src="https://cdn.prod.website-files.com/646a7cce782deca0e2f0093b/6474a762824b738821485bfc_6273d51524d8c764f1299b2a_IntroToSharepoint_Thumbnail%2520(2).jpeg" alt="شيربوينت أونلاين" class="rounded-lg shadow-xl animate-float">
+                </div>
+            </div>
+        </div>
+        <svg class="w-full h-24 text-gray-50" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160">
+            <path d="M0,128L80,117.3C160,107,320,85,480,90.7C640,96,800,128,960,128C1120,128,1280,96,1360,80L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16" data-aos="fade-up">لماذا شيربوينت أونلاين؟</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-cloud-upload-alt text-blue-600 text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">الوصول من أي مكان</h3>
+                    <p class="text-gray-600 text-center">الوصول إلى مستنداتك وملفاتك من أي مكان وفي أي وقت عبر الإنترنت دون الحاجة لتثبيت برامج إضافية.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-users text-blue-600 text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">تعاون فعال</h3>
+                    <p class="text-gray-600 text-center">العمل المشترك على المستندات في نفس الوقت مع زملائك وتتبع التغييرات والإصدارات بكل سهولة.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">أمان متقدم</h3>
+                    <p class="text-gray-600 text-center">حماية البيانات والمستندات بأحدث تقنيات الأمان والتشفير مع تحكم كامل في صلاحيات الوصول.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-search text-blue-600 text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">بحث متطور</h3>
+                    <p class="text-gray-600 text-center">محرك بحث قوي يمكنك من الوصول إلى المستندات والمعلومات التي تحتاجها بسرعة وكفاءة.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-cogs text-blue-600 text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">التكامل مع Office 365</h3>
+                    <p class="text-gray-600 text-center">تكامل سلس مع تطبيقات مايكروسوفت أوفيس 365 للعمل بكفاءة أعلى وإنتاجية مضاعفة.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-mobile-alt text-blue-600 text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">دعم الأجهزة المتنوعة</h3>
+                    <p class="text-gray-600 text-center">استخدام النظام على مختلف الأجهزة: الحواسيب، الهواتف الذكية، والأجهزة اللوحية بنفس الكفاءة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16" data-aos="fade-up">مقارنة أنظمة إدارة المستندات</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-lg shadow-lg" data-aos="fade-up">
+                    <thead>
+                        <tr class="gradient-bg text-white">
+                            <th class="p-4 text-right">الميزة</th>
+                            <th class="p-4 text-center">شيربوينت أونلاين</th>
+                            <th class="p-4 text-center">نظام الملفات المحلي</th>
+                            <th class="p-4 text-center">حلول تخزين سحابي بسيطة</th>
+                            <th class="p-4 text-center">أنظمة DMS التقليدية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4 font-medium">الوصول عن بعد</td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4 font-medium">التعاون في الوقت الفعلي</td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-minus text-yellow-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-minus text-yellow-500"></i></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4 font-medium">إدارة الإصدارات</td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-minus text-yellow-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4 font-medium">البحث المتقدم</td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-minus text-yellow-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4 font-medium">تكامل مع Office</td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-minus text-yellow-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-minus text-yellow-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-minus text-yellow-500"></i></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4 font-medium">سير العمل واﻷتمتة</td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-minus text-yellow-500"></i></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4 font-medium">القوائم والتطبيقات</td>
+                            <td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-times text-red-500"></i></td>
+                            <td class="p-4 text-center"><i class="fas fa-times text-red-500"></i></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 font-medium">التكاليف والصيانة</td>
+                            <td class="p-4 text-center">متوسط</td>
+                            <td class="p-4 text-center">مرتفع</td>
+                            <td class="p-4 text-center">منخفض</td>
+                            <td class="p-4 text-center">مرتفع جداً</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Features Section -->
+    <section id="advanced" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6" data-aos="fade-up">الميزات المتقدمة في شيربوينت أونلاين</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up">استفد من الإمكانات المتقدمة التي يوفرها شيربوينت أونلاين لتحسين إدارة المستندات وزيادة كفاءة العمل.</p>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-6" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-600">القوائم (Lists) المتقدمة</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-blue-100 rounded-full p-1">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                            </div>
+                            <p class="mr-4 text-gray-700">إنشاء قوائم مخصصة لتنظيم البيانات بالطريقة التي تناسب أعمالك.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-blue-100 rounded-full p-1">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                            </div>
+                            <p class="mr-4 text-gray-700">تصميم نماذج إدخال بيانات متكاملة لضمان دقة وتناسق المعلومات.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-blue-100 rounded-full p-1">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                            </div>
+                            <p class="mr-4 text-gray-700">تصفية وفرز البيانات حسب معايير متعددة للوصول السريع للمعلومات.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-blue-100 rounded-full p-1">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                            </div>
+                            <p class="mr-4 text-gray-700">إنشاء عروض مختلفة للبيانات: قوائم، بطاقات، مخططات، وتقويمات.</p>
+                        </li>
+                    </ul>
+                    
+                    <!-- <div class="mt-8">
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition transform hover:scale-105">استكشف قوائم شيربوينت</button>
+                    </div> -->
+                </div>
+                
+                <div class="md:w-1/2 p-6" data-aos="fade-left">
+                    <img src="https://www.abelsolutions.com/wp-content/uploads/2024/03/2024-06_SP-List-Blog_Feature.jpg" alt="قوائم شيربوينت" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row mt-16">
+                <div class="md:w-1/2 p-6 order-2 md:order-1" data-aos="fade-right">
+                    <img src="https://cdn.shopaccino.com/igmguru/products/power-apps-igmguru_1057006448_l.jpg?v=531" alt="تطبيقات شيربوينت" class="rounded-lg shadow-lg w-full">
+                </div>
+                
+                <div class="md:w-1/2 p-6 order-1 md:order-2" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-600">التطبيقات المخصصة (Power Apps)</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-blue-100 rounded-full p-1">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                            </div>
+                            <p class="mr-4 text-gray-700">إنشاء تطبيقات مخصصة بدون برمجة لتلبية الاحتياجات الخاصة بعملك.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-blue-100 rounded-full p-1">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                            </div>
+                            <p class="mr-4 text-gray-700">أتمتة العمليات وسير العمل لتقليل المهام الروتينية وزيادة الإنتاجية.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-blue-100 rounded-full p-1">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                            </div>
+                            <p class="mr-4 text-gray-700">تكامل مع مصادر البيانات المختلفة داخل وخارج مؤسستك.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-blue-100 rounded-full p-1">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                            </div>
+                            <p class="mr-4 text-gray-700">استخدام التطبيقات على الأجهزة المحمولة للعمل من أي مكان وفي أي وقت.</p>
+                        </li>
+                    </ul>
+                    
+                    <!-- <div class="mt-8">
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition transform hover:scale-105">اكتشف Power Apps</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Benefits Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">الفوائد التجارية للمؤسسات</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-5xl font-bold mb-4 text-center">40%</div>
+                    <p class="text-center">زيادة في كفاءة العمل وإدارة المستندات</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-5xl font-bold mb-4 text-center">60%</div>
+                    <p class="text-center">تقليل في وقت البحث عن المستندات والمعلومات</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-5xl font-bold mb-4 text-center">30%</div>
+                    <p class="text-center">تخفيض في تكاليف تخزين وإدارة المستندات الورقية</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-5xl font-bold mb-4 text-center">25%</div>
+                    <p class="text-center">تحسين في التعاون بين الفرق وزيادة الإنتاجية</p>
+                </div>
+            </div>
+            
+            <!-- <div class="mt-16 text-center" data-aos="fade-up">
+                <p class="text-lg mb-8 max-w-3xl mx-auto">اكتشف كيف يمكن لشيربوينت أونلاين تحسين إدارة المستندات في مؤسستك وزيادة الكفاءة والإنتاجية.</p>
+                <button class="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition transform hover:scale-105">احصل على استشارة مجانية</button>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16" data-aos="fade-up">آراء عملائنا</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gray-300 flex-shrink-0"></div>
+                        <div class="mr-4">
+                            <h4 class="font-bold">أحمد عبدالله</h4>
+                            <p class="text-gray-600">مدير تقنية المعلومات، شركة التقدم</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"ساعدنا شيربوينت أونلاين على توحيد إدارة المستندات عبر فروعنا المختلفة وتحسين التعاون بين الإدارات، مما أدى إلى زيادة ملحوظة في الإنتاجية."</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gray-300 flex-shrink-0"></div>
+                        <div class="mr-4">
+                            <h4 class="font-bold">نورة الراشد</h4>
+                            <p class="text-gray-600">مديرة المشاريع، شركة المستقبل</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"ميزة القوائم والتطبيقات المخصصة في شيربوينت أونلاين مكّنتنا من تطوير حلول مخصصة لإدارة مشاريعنا ومتابعة التقدم بكل سهولة ودقة."</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gray-300 flex-shrink-0"></div>
+                        <div class="mr-4">
+                            <h4 class="font-bold">محمد السالم</h4>
+                            <p class="text-gray-600">المدير التنفيذي، مؤسسة الإبداع</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"الانتقال من نظام الملفات التقليدي إلى شيربوينت أونلاين كان من أفضل القرارات التي اتخذناها. التحسن في سير العمل والأمان واضح للجميع."</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- CTA Section -->
+    <!-- <section id="contact" class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">جاهز للانتقال إلى نظام إدارة مستندات متطور؟</h2>
+                    <p class="text-lg mb-8">تواصل معنا اليوم للحصول على استشارة مجانية حول كيفية تحسين إدارة المستندات في مؤسستك باستخدام شيربوينت أونلاين.</p>
+                    <form class="space-y-4">
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <input type="text" placeholder="الاسم الكامل" class="p-3 rounded-lg w-full text-gray-800">
+                            <input type="email" placeholder="البريد الإلكتروني" class="p-3 rounded-lg w-full text-gray-800">
+                        </div>
+                        <input type="text" placeholder="اسم الشركة" class="p-3 rounded-lg w-full text-gray-800">
+                        <textarea placeholder="كيف يمكننا مساعدتك؟" class="p-3 rounded-lg w-full h-32 text-gray-800"></textarea>
+                        <button class="bg-white text-blue-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition transform hover:scale-105 w-full md:w-auto">إرسال الطلب</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <img src="/api/placeholder/500/400" alt="تواصل معنا" class="rounded-lg shadow-xl animate-float">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Use Cases Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6" data-aos="fade-up">حالات استخدام شيربوينت أونلاين</h2>
+        <p class="text-center text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up">اكتشف كيف يمكن لشيربوينت أونلاين أن يكون الحل الأمثل لمختلف احتياجات مؤسستك في إدارة المستندات والتعاون.</p>
+        
+        <!-- Use Case 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-2/5 p-6 bg-blue-600 text-white flex items-center">
+                    <div>
+                        <div class="bg-white bg-opacity-20 rounded-full p-4 inline-block mb-4">
+                            <i class="fas fa-building text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">إدارة المشاريع الهندسية والبناء</h3>
+                        <p>تنظيم وإدارة مستندات المشاريع الهندسية الضخمة بكفاءة عالية</p>
+                    </div>
+                </div>
+                <div class="md:w-3/5 p-8">
+                    <h4 class="text-xl font-bold text-blue-600 mb-4">التحديات</h4>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>آلاف المستندات الفنية والمخططات من مختلف الأطراف</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>صعوبة تتبع إصدارات المستندات والتعديلات</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>الحاجة للتعاون بين فرق متعددة في مواقع مختلفة</span>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-bold text-blue-600 mb-4">كيف يساعد شيربوينت أونلاين</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>هيكل موحد لتنظيم جميع مستندات المشروع حسب المراحل والأقسام</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>إدارة الإصدارات التلقائية مع سجل كامل للتغييرات</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>قوائم مخصصة لتتبع حالة المستندات وسير الموافقات</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>تطبيقات مخصصة للمراجعة والاعتماد من الأجهزة المحمولة في مواقع العمل</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-2/5 p-6 bg-blue-700 text-white flex items-center">
+                    <div>
+                        <div class="bg-white bg-opacity-20 rounded-full p-4 inline-block mb-4">
+                            <i class="fas fa-briefcase text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">الإدارة القانونية وإدارة العقود</h3>
+                        <p>حلول متكاملة للمستندات القانونية والعقود مع أعلى مستويات الأمان</p>
+                    </div>
+                </div>
+                <div class="md:w-3/5 p-8">
+                    <h4 class="text-xl font-bold text-blue-600 mb-4">التحديات</h4>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>الحاجة لمستويات عالية من السرية والأمان</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>متابعة تواريخ انتهاء العقود والالتزامات</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>التحكم الدقيق في صلاحيات الوصول للوثائق الحساسة</span>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-bold text-blue-600 mb-4">كيف يساعد شيربوينت أونلاين</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>تصنيف المستندات مع سياسات أمان متدرجة لكل مستوى</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>قوائم مخصصة لتتبع العقود مع تنبيهات آلية قبل تواريخ الانتهاء</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>سير عمل آلي للمراجعة والموافقة مع خاصية التوقيع الإلكتروني</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>تقارير تفصيلية لتتبع الوصول للمستندات وتدقيق العمليات</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-2/5 p-6 bg-blue-800 text-white flex items-center">
+                    <div>
+                        <div class="bg-white bg-opacity-20 rounded-full p-4 inline-block mb-4">
+                            <i class="fas fa-graduation-cap text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">المؤسسات التعليمية</h3>
+                        <p>منصة شاملة لإدارة المحتوى التعليمي والتعاون بين المعلمين والطلاب</p>
+                    </div>
+                </div>
+                <div class="md:w-3/5 p-8">
+                    <h4 class="text-xl font-bold text-blue-600 mb-4">التحديات</h4>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>كميات كبيرة من المواد التعليمية لمختلف المراحل والتخصصات</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>الحاجة لمشاركة المحتوى مع مستويات مختلفة من الوصول</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>متابعة أنشطة الطلاب وتقييم التقدم الأكاديمي</span>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-bold text-blue-600 mb-4">كيف يساعد شيربوينت أونلاين</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>مكتبات مستندات منظمة حسب المناهج والمواد الدراسية</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>مواقع فرعية للفصول الدراسية مع لوحات مناقشة تفاعلية</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>قوائم مخصصة لتتبع الواجبات والمشاريع مع مؤشرات الأداء</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>تطبيقات Power Apps لتسهيل التقييم وإدارة الدرجات</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Use Case 4 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-2/5 p-6 bg-blue-900 text-white flex items-center">
+                    <div>
+                        <div class="bg-white bg-opacity-20 rounded-full p-4 inline-block mb-4">
+                            <i class="fas fa-hospital text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">القطاع الصحي</h3>
+                        <p>إدارة الوثائق الإدارية والإجراءات التشغيلية في المؤسسات الصحية</p>
+                    </div>
+                </div>
+                <div class="md:w-3/5 p-8">
+                    <h4 class="text-xl font-bold text-blue-600 mb-4">التحديات</h4>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>الحاجة لإدارة الوثائق المتعلقة بالجودة والاعتماد</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>تحديث وتوزيع السياسات والإجراءات بشكل منتظم</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-blue-600 text-xs mt-2 ml-2"></i>
+                            <span>الالتزام بمعايير الخصوصية وأمن المعلومات</span>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-bold text-blue-600 mb-4">كيف يساعد شيربوينت أونلاين</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>نظام متكامل للسياسات والإجراءات مع خاصية المراجعة الدورية</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>قوالب موحدة للوثائق والسجلات لضمان الالتزام بمعايير الجودة</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>سير عمل آلي للموافقات والاعتمادات مع توثيق كامل</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-lg mt-1 ml-2"></i>
+                            <span>لوحات معلومات مخصصة لمتابعة مؤشرات الأداء وتنبيهات الامتثال</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-16" data-aos="fade-up">
+            <p class="text-lg mb-8">مهما كانت احتياجات مؤسستك، يوفر شيربوينت أونلاين الأدوات والمرونة لتصميم حلول تناسب متطلباتك الخاصة.</p>
+            <!-- <button class="gradient-bg text-white px-8 py-4 rounded-lg font-bold hover:opacity-90 transition transform hover:scale-105">استكشف المزيد من حالات الاستخدام</button> -->
+        </div>
+    </div>
+</section>
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16" data-aos="fade-up">الأسئلة الشائعة</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6" x-data="{selected:null}">
+                <div class="bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <button class="flex justify-between items-center w-full p-4 text-right font-bold" @click="selected !== 1 ? selected = 1 : selected = null">
+                        <i class="fas fa-chevron-down" :class="{'transform rotate-180': selected == 1}"></i>
+                        <span>ما هي متطلبات استخدام شيربوينت أونلاين؟</span>
+                    </button>
+                    <div class="overflow-hidden max-h-0 transition-all duration-300" :class="{'max-h-64': selected == 1}">
+                        <p class="p-4 border-t">يتطلب استخدام شيربوينت أونلاين اشتراك في Microsoft 365 للأعمال، ويمكن الوصول إليه من خلال أي متصفح ويب حديث دون الحاجة لتثبيت برامج إضافية.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <button class="flex justify-between items-center w-full p-4 text-right font-bold" @click="selected !== 2 ? selected = 2 : selected = null">
+                        <i class="fas fa-chevron-down" :class="{'transform rotate-180': selected == 2}"></i>
+                        <span>هل يمكن نقل ملفاتنا الحالية إلى شيربوينت أونلاين؟</span>
+                    </button>
+                    <div class="overflow-hidden max-h-0 transition-all duration-300" :class="{'max-h-64': selected == 2}">
+                        <p class="p-4 border-t">نعم، يمكن نقل الملفات والمستندات الحالية بسهولة إلى شيربوينت أونلاين باستخدام أدوات الترحيل المدمجة أو من خلال خدمات الدعم التي نقدمها.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <button class="flex justify-between items-center w-full p-4 text-right font-bold" @click="selected !== 3 ? selected = 3 : selected = null">
+                        <i class="fas fa-chevron-down" :class="{'transform rotate-180': selected == 3}"></i>
+                        <span>ما مدى أمان البيانات في شيربوينت أونلاين؟</span>
+                    </button>
+                    <div class="overflow-hidden max-h-0 transition-all duration-300" :class="{'max-h-64': selected == 3}">
+                        <p class="p-4 border-t">يوفر شيربوينت أونلاين مستويات عالية من الأمان، بما في ذلك التشفير المتقدم للبيانات، والتحكم الدقيق في الصلاحيات، والامتثال للمعايير العالمية مثل ISO 27001 وGDPR.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <button class="flex justify-between items-center w-full p-4 text-right font-bold" @click="selected !== 4 ? selected = 4 : selected = null">
+                        <i class="fas fa-chevron-down" :class="{'transform rotate-180': selected == 4}"></i>
+                        <span>هل نحتاج إلى خبير تقني لإدارة شيربوينت أونلاين؟</span>
+                    </button>
+                    <div class="overflow-hidden max-h-0 transition-all duration-300" :class="{'max-h-64': selected == 4}">
+                        <p class="p-4 border-t">تم تصميم واجهة شيربوينت أونلاين لتكون سهلة الاستخدام للمستخدمين العاديين. ومع ذلك، للاستفادة القصوى من الميزات المتقدمة، قد يكون من المفيد وجود شخص ذو خبرة تقنية أو الاستعانة بخدمات الدعم التي نقدمها.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-microsoft text-2xl"></i>
+                        <span class="mr-3 text-lg font-bold">شيربوينت أونلاين</span>
+                    </div>
+                    <p class="text-gray-400 max-w-md">حلول متكاملة لإدارة المستندات والتعاون الفعال في بيئة العمل الرقمية.</p>
+                </div>
+                
+                <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold mb-4">روابط سريعة</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">الرئيسية</a></li>
+                            <li><a href="#features" class="text-gray-400 hover:text-white transition">المميزات</a></li>
+                            <li><a href="#comparison" class="text-gray-400 hover:text-white transition">المقارنة</a></li>
+                            <li><a href="#advanced" class="text-gray-400 hover:text-white transition">الميزات المتقدمة</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">الدعم</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">المساعدة</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">التوثيق</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">الأسئلة الشائعة</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">تواصل معنا</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin ml-2"></i>LinkedIn</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter ml-2"></i>Twitter</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook ml-2"></i>Facebook</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube ml-2"></i>YouTube</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 جميع الحقوق محفوظة</p>
+                <!-- <div class="flex space-x-6 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">الشروط والأحكام</a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
